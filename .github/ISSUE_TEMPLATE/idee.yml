@@ -1,0 +1,16 @@
+name: 💡 Proposer une idée · Suggest an idea
+description: Une fonction qui te manque ou une amélioration · A missing feature or an improvement
+labels: ["idée · idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Ton idée · Your idea
+      description: Qu'aimerais-tu pouvoir faire ? · What would you like to be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Pourquoi ce serait utile · Why it would help
+      description: Dans quelle situation tu en aurais besoin. · When you would need it.

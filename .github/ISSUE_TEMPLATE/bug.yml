@@ -1,0 +1,45 @@
+name: 🐞 Signaler un bug · Report a bug
+description: Quelque chose ne marche pas comme prévu · Something doesn't work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler un problème ! · Thanks for reporting a problem!
+        Tu peux écrire en français ou en anglais. · You can write in French or English.
+  - type: textarea
+    id: what
+    attributes:
+      label: Que s'est-il passé ? · What happened?
+      description: Ce que tu as fait, ce que tu attendais, et ce qui s'est passé à la place. · What you did, what you expected, and what happened instead.
+      placeholder: "Ex : j'ai cliqué sur « Tout faire » et… · E.g. I clicked “Do it all” and…"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version de MediaManager · MediaManager version
+      description: Visible dans Nouveautés · Shown in What's new
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: player
+    attributes:
+      label: Ton lecteur · Your player
+      multiple: true
+      options: [Jellyfin, Plex, Kodi, Emby, "Aucun · None"]
+  - type: dropdown
+    id: storage
+    attributes:
+      label: Où sont tes films ? · Where are your movies?
+      options: ["Sur le PC · On the PC", "Disque externe · External drive", "NAS / dossier réseau · NAS / network folder"]
+  - type: textarea
+    id: log
+    attributes:
+      label: Journal technique (facultatif) · Technical log (optional)
+      description: Réglages → « Un bug ? Ouvrir le journal technique », puis glisse le fichier ici. · Settings → “A bug? Open the technical log”, then drag the file here.
+  - type: textarea
+    id: screens
+    attributes:
+      label: Captures d'écran (facultatif) · Screenshots (optional)
